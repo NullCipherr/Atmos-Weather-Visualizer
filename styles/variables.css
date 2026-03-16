@@ -1,0 +1,81 @@
+:root {
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Avenir Next", sans-serif;
+
+  --text-1: #f6f8ff;
+  --text-2: #c7d2ef;
+  --text-3: #90a2ca;
+
+  --surface-1: rgba(8, 17, 40, 0.72);
+  --surface-2: rgba(16, 30, 62, 0.68);
+  --surface-3: rgba(255, 255, 255, 0.08);
+  --border-1: rgba(255, 255, 255, 0.2);
+
+  --accent: #86a8ff;
+  --accent-strong: #5c85ff;
+  --danger: #ff8fa0;
+  --success: #75d9a6;
+
+  --shadow-soft: 0 14px 36px rgba(2, 6, 23, 0.35);
+  --shadow-strong: 0 28px 54px rgba(1, 5, 20, 0.5);
+
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+
+  --h1: clamp(1.8rem, 2.5vw, 2.6rem);
+  --h2: clamp(1.05rem, 1.8vw, 1.35rem);
+  --body: 1rem;
+  --small: 0.875rem;
+
+  --bg-gradient: radial-gradient(circle at 20% 20%, #466bbf 0%, transparent 40%),
+    radial-gradient(circle at 80% 0%, #2a4e9c 0%, transparent 42%),
+    linear-gradient(155deg, #040816 0%, #0a1636 45%, #0f244a 100%);
+}
+
+body.theme-clear-day {
+  --bg-gradient: radial-gradient(circle at 20% 18%, #6fa5ff 0%, transparent 42%),
+    radial-gradient(circle at 80% 5%, #c6dbff 0%, transparent 40%),
+    linear-gradient(160deg, #355fbe 0%, #4d84da 46%, #6ba8f2 100%);
+}
+
+body.theme-cloudy-day {
+  --bg-gradient: radial-gradient(circle at 30% 15%, #9aa9bf 0%, transparent 43%),
+    radial-gradient(circle at 75% 10%, #bdc8d8 0%, transparent 38%),
+    linear-gradient(165deg, #45566f 0%, #5a6f8d 45%, #7387a7 100%);
+}
+
+body.theme-rainy {
+  --bg-gradient: radial-gradient(circle at 12% 12%, #3f6a8f 0%, transparent 40%),
+    radial-gradient(circle at 88% 15%, #4f7da4 0%, transparent 40%),
+    linear-gradient(170deg, #1f3148 0%, #2c4a6b 46%, #355a7e 100%);
+}
+
+body.theme-storm {
+  --bg-gradient: radial-gradient(circle at 20% 20%, #516083 0%, transparent 45%),
+    radial-gradient(circle at 80% 10%, #4f4a76 0%, transparent 40%),
+    linear-gradient(170deg, #1b1d33 0%, #252b4f 42%, #323a62 100%);
+}
+
+body.theme-snow {
+  --bg-gradient: radial-gradient(circle at 25% 18%, #f8fbff 0%, transparent 42%),
+    radial-gradient(circle at 80% 0%, #d9e5ff 0%, transparent 38%),
+    linear-gradient(155deg, #6b88b7 0%, #7ca0cf 45%, #91b7df 100%);
+}
+
+body.theme-clear-night,
+body.theme-cloudy-night {
+  --bg-gradient: radial-gradient(circle at 25% 20%, #41528d 0%, transparent 45%),
+    radial-gradient(circle at 80% 5%, #2d3764 0%, transparent 40%),
+    linear-gradient(155deg, #070915 0%, #131c3a 46%, #1e2d55 100%);
+}
