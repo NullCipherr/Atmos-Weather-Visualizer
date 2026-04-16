@@ -46,6 +46,8 @@
   display: grid;
   place-items: center;
   cursor: pointer;
+  will-change: transform;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 #favorite-icon {
@@ -53,6 +55,7 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
+  transition: transform 220ms ease;
 }
 
 .current-top {
@@ -117,6 +120,8 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
   padding: var(--space-4);
+  will-change: transform;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 .metric-label {
@@ -151,6 +156,9 @@
   padding: var(--space-3);
   text-align: center;
   scroll-snap-align: start;
+  overflow: hidden;
+  will-change: border-color, background, box-shadow;
+  transition: border-color 200ms ease, background 200ms ease, box-shadow 200ms ease;
 }
 
 .hour-time {
@@ -162,6 +170,8 @@
   width: 44px;
   height: 44px;
   margin: var(--space-2) auto;
+  will-change: transform;
+  transition: transform 200ms ease;
 }
 
 .hour-temp {
@@ -182,6 +192,8 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.06);
   padding: var(--space-3) var(--space-4);
+  will-change: transform;
+  transition: transform 200ms ease, border-color 200ms ease, background 200ms ease;
 }
 
 .day-main {
@@ -193,6 +205,7 @@
 .day-icon {
   width: 42px;
   height: 42px;
+  transition: transform 200ms ease;
 }
 
 .day-date {
@@ -228,6 +241,8 @@
   line-height: 1;
   cursor: pointer;
   min-height: 36px;
+  will-change: transform;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
 .tag .remove {
@@ -270,5 +285,49 @@
 @keyframes shimmer {
   to {
     background-position-x: -220%;
+  }
+}
+
+@media (hover: hover) {
+  .btn-icon:hover {
+    transform: translateY(-1px) scale(1.03);
+    border-color: rgba(255, 213, 128, 0.75);
+    background: rgba(255, 213, 128, 0.16);
+  }
+
+  .btn-icon:hover #favorite-icon {
+    transform: scale(1.15);
+  }
+
+  .metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.26);
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .hour-item:hover {
+    border-color: rgba(255, 255, 255, 0.26);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 20px rgba(2, 6, 23, 0.22);
+  }
+
+  .hour-item:hover .hour-icon {
+    transform: scale(1.08);
+  }
+
+  .day-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .day-item:hover .day-icon {
+    transform: scale(1.06);
+  }
+
+  .tag:hover {
+    transform: translateY(-1px);
+    border-color: rgba(134, 168, 255, 0.65);
+    background: rgba(134, 168, 255, 0.2);
   }
 }
