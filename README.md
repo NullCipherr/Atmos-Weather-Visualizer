@@ -16,7 +16,7 @@
 
 Main application interface:
 
-![Atmos Preview](./src/Background.jpg)
+![Atmos Preview](./docs/assets/preview.png)
 
 ---
 
@@ -121,6 +121,8 @@ Note: there is currently no versioned automated benchmark in this repository.
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── assets/
 ├── docs/
+│   ├── assets/
+│   │   └── preview.png
 │   └── README.md
 ├── scripts/
 │   ├── api.js
@@ -129,8 +131,6 @@ Note: there is currently no versioned automated benchmark in this repository.
 │   ├── ui.js
 │   ├── utils.js
 │   └── weather.js
-├── src/
-│   └── Background.jpg
 ├── styles/
 │   ├── components.css
 │   ├── main.css

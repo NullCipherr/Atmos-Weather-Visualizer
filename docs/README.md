@@ -4,6 +4,7 @@ This directory contains complementary project documentation.
 
 ## Current index
 
+- Preview asset: [./assets/preview.png](./assets/preview.png)
 - Main README: [../README.md](../README.md)
 - Contributing: [../CONTRIBUTING.md](../CONTRIBUTING.md)
 - Code of Conduct: [../CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md)
