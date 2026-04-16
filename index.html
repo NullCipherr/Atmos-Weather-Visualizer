@@ -120,8 +120,23 @@
     </section>
   </main>
 
-  <footer class="app-footer">
-    <p>Desenvolvido por Andrei Costa • Atmos • Dados por <a href="https://www.weatherapi.com/" target="_blank" rel="noreferrer">WeatherAPI</a></p>
+  <footer class="app-footer" role="contentinfo">
+    <div class="app-footer__content">
+      <div class="app-footer__brand">
+        <p class="app-footer__title">Atmos Weather Intelligence</p>
+        <p class="app-footer__subtitle">Aplicação climática com foco em precisão, contexto e uma experiência de consulta rápida.</p>
+      </div>
+
+      <nav class="app-footer__nav" aria-label="Links do rodapé">
+        <a href="https://www.weatherapi.com/" target="_blank" rel="noreferrer">WeatherAPI</a>
+        <a href="#app">Voltar ao topo</a>
+      </nav>
+    </div>
+
+    <div class="app-footer__meta">
+      <p>Desenvolvido por Andrei Costa</p>
+      <small>Dados meteorológicos fornecidos pela WeatherAPI.</small>
+    </div>
   </footer>
 
   <script type="module" src="./scripts/app.js"></script>

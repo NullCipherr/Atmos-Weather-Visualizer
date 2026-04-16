@@ -29,7 +29,7 @@ body {
   width: min(1160px, 92vw);
   margin: 0 auto;
   padding: var(--space-10) 0 var(--space-8);
-  overflow-x: clip;
+  overflow-x: visible;
 }
 
 .app-header {
@@ -140,11 +140,16 @@ body {
 }
 
 .panel {
+  position: relative;
   border-radius: var(--radius-xl);
   background: linear-gradient(150deg, var(--surface-1), var(--surface-2));
   border: 1px solid var(--border-1);
-  box-shadow: var(--shadow-soft);
+  box-shadow: none;
+  filter: drop-shadow(0 14px 36px rgba(2, 6, 23, 0.35));
+  overflow: hidden;
+  isolation: isolate;
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   padding: var(--space-6);
   min-width: 0;
 }
@@ -227,15 +232,80 @@ body {
 .app-footer {
   width: min(1160px, 92vw);
   margin: 0 auto var(--space-6);
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(140deg, var(--surface-1), rgba(14, 28, 58, 0.7));
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  padding: var(--space-5);
   color: var(--text-2);
-  font-size: 0.8rem;
-  opacity: 0.9;
+  font-size: 0.84rem;
+}
+
+.app-footer__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.app-footer__brand {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 58ch;
+}
+
+.app-footer__title {
+  color: var(--text-1);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.app-footer__subtitle {
+  color: var(--text-2);
+  line-height: 1.45;
   text-wrap: balance;
+}
+
+.app-footer__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.app-footer__meta {
+  margin-top: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.app-footer__meta p {
+  color: var(--text-1);
+}
+
+.app-footer__meta small {
+  color: var(--text-3);
 }
 
 .app-footer a {
   color: var(--text-1);
-  text-decoration-color: rgba(255, 255, 255, 0.4);
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 0.2em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.app-footer a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .sr-only {
